@@ -1,18 +1,34 @@
-$accent =    #0ecb2d
-$white =     #fff
-$silver =    #F4F4F4
-$lightgrey = #ececec
-$grey =      #ccc
-$midgrey =   #777
-$darkgrey =  #444
-$black =     #222
-$trueblack = #000
+$primary =    #337ab7
+$success =    #5cb85c
+$info    =    #5bc0de
+$warning =    #f0ad4e
+$danger  =    #d9534f
+
+$white     =  #fff
+$silver    =  #F4F4F4
+$lightgrey =  #ececec
+$grey      =  #ccc
+$midgrey   =  #777
+$darkgrey  =  #444
+$black     =  #222
+$trueblack =  #000
 
 //====================================================
 //  Text Colors
 //====================================================
 
-.color-accent      { color: $accent }
+.color-primary     { color: $primary }
+.color-success     { color: $success }
+.color-info        { color: $info }
+.color-warning     { color: $warning }
+.color-danger      { color: $danger }
+
+.text-primary     { color: $primary }
+.text-success     { color: $success }
+.text-info        { color: $info }
+.text-warning     { color: $warning }
+.text-danger      { color: $danger }
+
 .color-white       { color: $white }
 .color-silver      { color: $silver }
 .color-lightgrey   { color: $lightgrey }
@@ -24,11 +40,35 @@ $trueblack = #000
 .color-inherit     { color: inherit }
 .color-transparent { color: transparent }
 
+.text-white       { color: $white }
+.text-silver      { color: $silver }
+.text-lightgrey   { color: $lightgrey }
+.text-grey        { color: $grey }
+.text-midgrey     { color: $midgrey }
+.text-darkgrey    { color: $darkgrey }
+.text-black       { color: $black }
+.text-trueblack   { color: $trueblack }
+.text-inherit     { color: inherit }
+.text-transparent { color: transparent }
+
+.cc     { color: $grey }
+.c7     { color: $midgrey }
+.c4     { color: $darkgrey }
+.c2     { color: $black }
+.c3     { color: #333 }
+.c6     { color: #666 }
+.c9     { color: #999 }
+
 //====================================================
 //  Background Colors
 //====================================================
 
-.bg-accent      { background-color: $accent }
+.bg-primary     { background-color: $primary }
+.bg-success     { background-color: $success }
+.bg-info        { background-color: $info }
+.bg-warning     { background-color: $warning }
+.bg-danger      { background-color: $danger }
+
 .bg-white       { background-color: $white }
 .bg-silver      { background-color: $silver }
 .bg-lightgrey   { background-color: $lightgrey }
@@ -46,7 +86,12 @@ $trueblack = #000
 // TODO: Figure out best way to eliminate !important
 // !important needed to override color property in shorthand
 
-.border-accent      { border-color: $accent !important }
+.border-primary      { border-color: $primary !important }
+.border-success      { border-color: $success !important }
+.border-info         { border-color: $info !important }
+.border-warning      { border-color: $warning !important }
+.border-danger       { border-color: $danger !important }
+
 .border-white       { border-color: $white !important }
 .border-silver      { border-color: $silver !important }
 .border-lightgrey   { border-color: $lightgrey !important }

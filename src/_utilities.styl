@@ -4,15 +4,25 @@
 
 .hidden       { display: none }
 .hide         { display: none }
+
 .block        { display: block }
-.flex         { display: flex }
 .inline       { display: inline }
 .inline-block { display: inline-block }
+
+.flex         { display: flex }
 .inline-flex  { display: inline-flex }
 
 .overflow-hidden { overflow: hidden }
 .overflow-scroll { overflow: scroll }
 .overflow-auto   { overflow: auto }
+
+// 自定义短类名
+.d-b  { display: block }
+.d-ib { display: inline-block }
+.d-i  { display: inline }
+
+.of-h { overflow: hidden }
+.of-a { overflow: auto }
 
 //====================================================
 //  Text wrap
@@ -25,16 +35,17 @@
 //  Scrolling
 //====================================================
 
-.scroll-horizontal {
+.scroll-x {
   overflow-x: scroll
   overflow-y: hidden
 }
 
-.scroll-vertical {
+.scroll-y {
   overflow-x: hidden
   overflow-y: scroll
 }
 
+// 隐藏滚动条
 .no-scrollbar::-webkit-scrollbar {
   width: 0px
   height: 0px

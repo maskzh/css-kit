@@ -1,0 +1,113 @@
+//====================================================
+//  Grid Componets
+//====================================================
+
+.column
+  display: flex
+  flex-direction: column
+  flex: 1 1 auto
+  height: auto
+  flex-wrap: nowrap
+
+.row
+  display: flex
+  flex: 1 1 auto
+  height: auto
+  flex-direction: row
+  flex-wrap: wrap
+
+//====================================================
+//  Gutters
+//====================================================
+
+// Add .gutters to .row/.column elements
+.gutters { padding: $padding }
+
+// All direct descendants of .gutters get margin
+.gutters > .column,
+.gutters > .row
+  margin: $margin
+
+// offset padding/margin to maintain width
+.gutters >
+  .w5    { width:  calc(5%   -  ($padding + $margin)) }
+  .w10   { width:  calc(10%  -  ($padding + $margin)) }
+  .w15   { width:  calc(15%  -  ($padding + $margin)) }
+  .w20   { width:  calc(20%  -  ($padding + $margin)) }
+  .w25   { width:  calc(25%  -  ($padding + $margin)) }
+  .w30   { width:  calc(30%  -  ($padding + $margin)) }
+  .w35   { width:  calc(35%  -  ($padding + $margin)) }
+  .w40   { width:  calc(40%  -  ($padding + $margin)) }
+  .w45   { width:  calc(45%  -  ($padding + $margin)) }
+  .w50   { width:  calc(50%  -  ($padding + $margin)) }
+  .w55   { width:  calc(55%  -  ($padding + $margin)) }
+  .w60   { width:  calc(60%  -  ($padding + $margin)) }
+  .w65   { width:  calc(65%  -  ($padding + $margin)) }
+  .w70   { width:  calc(70%  -  ($padding + $margin)) }
+  .w75   { width:  calc(75%  -  ($padding + $margin)) }
+  .w80   { width:  calc(80%  -  ($padding + $margin)) }
+  .w85   { width:  calc(85%  -  ($padding + $margin)) }
+  .w90   { width:  calc(90%  -  ($padding + $margin)) }
+  .w95   { width:  calc(95%  -  ($padding + $margin)) }
+  .w100  { width:  calc(100% -  ($padding + $margin)) }
+
+// ====================================================
+//   Positioning for Flex Items
+// ====================================================
+
+// Columns & Rows need reversed styles to create the same effect
+
+.center               { align-items: center; justify-content: center }
+.top-left             { align-items: flex-start; justify-content: flex-start }
+.bottom-right         { align-items: flex-end; justify-content: flex-end }
+
+.column.top-center    { align-items: center; justify-content: flex-start }
+.column.top-right     { align-items: flex-end; justify-content: flex-start }
+.column.center-left   { align-items: flex-start; justify-content: center }
+.column.center-right  { align-items: flex-end; justify-content: center }
+.column.bottom-left   { align-items: flex-start; justify-content: flex-end }
+.column.bottom-center { align-items: center; justify-content: flex-end }
+
+.row.top-center       { align-items: flex-start; justify-content: center }
+.row.top-right        { align-items: flex-start; justify-content: flex-end }
+.row.center-left      { align-items: center; justify-content: flex-start }
+.row.center-right     { align-items: center; justify-content: flex-end }
+.row.bottom-left      { align-items: flex-end; justify-content: flex-start }
+.row.bottom-center    { align-items: flex-end; justify-content: center }
+
+// ====================================================
+//   Flex Item Alignment
+// ====================================================
+
+.space-around   { justify-content: space-around }
+.space-between  { justify-content: space-between }
+
+.align-top      { align-items: flex-start }
+.align-middle   { align-items: middle }
+.align-baseline { align-items: baseline }
+.align-stretch  { align-items: stretch }
+
+//====================================================
+//  Flex Order
+//====================================================
+
+.order-1  { order: 1 }
+.order-2  { order: 2 }
+.order-3  { order: 3 }
+.order-4  { order: 4 }
+.order-5  { order: 5 }
+.order-6  { order: 6 }
+.order-7  { order: 7 }
+.order-8  { order: 8 }
+.order-9  { order: 9 }
+.order-10 { order: 10 }
+
+//====================================================
+//  Flex Sizing
+//====================================================
+
+.flex1 { flex: 1 }
+.flex2 { flex: 2 }
+.flex3 { flex: 3 }
+.flex4 { flex: 4 }
+.flex5 { flex: 5 }

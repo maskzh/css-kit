@@ -1,10 +1,10 @@
-import gulp from 'gulp'
-import notify from 'gulp-notify'
-import sourcemaps from 'gulp-sourcemaps'
-import stylus from 'gulp-stylus'
-import postcss from 'gulp-postcss'
-import autoprefixer from 'autoprefixer'
-import cssnano from 'cssnano'
+var gulp = require('gulp')
+var notify = require('gulp-notify')
+var sourcemaps = require('gulp-sourcemaps')
+var stylus = require('gulp-stylus')
+var postcss = require('gulp-postcss')
+var autoprefixer = require('autoprefixer')
+var cssnano = require('cssnano')
 
 var processors = [
   autoprefixer({
@@ -19,8 +19,8 @@ var processors = [
   })
 ]
 
-gulp.task('watch', () => {
-  gulp.watch('src/*.styl').on('change', (event) => {
+gulp.task('watch', function(){
+  gulp.watch('src/*.styl').on('change', function(event){
     gulp.src('src/toolkit.styl')
       .pipe(sourcemaps.init())
       .pipe(stylus())
@@ -31,14 +31,14 @@ gulp.task('watch', () => {
         message: "<%= file.relative %>",
         title: "Stylus Compile"
       }))
-    console.log('[stylus Compiled]')
+    console.log('[stylus Compiling]')
   })
 })
 
-gulp.task('default', () => {
+gulp.task('default', function(){
   gulp.src('src/toolkit.styl')
     .pipe(stylus())
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist'))
-  console.log('[stylus build]')
+  console.log('[stylus building]')
 })

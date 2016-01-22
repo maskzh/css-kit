@@ -2,9 +2,6 @@
 //  Typography
 //====================================================
 
-@font-face { font-family: 'Office Code Pro'; src: url('../fonts/OfficeCodePro-Regular.woff') }
-$base-font = "Helvetica Neue",Helvetica,"Microsoft Yahei",Arial,Verdana,"Hiragino Sans GB",STHeiti,sans-serif
-$mono-font = 'Office Code Pro', Monaco, Consolas, monospace
 $base-font-size = 1rem
 $base-line-height = 1.5
 
@@ -15,14 +12,9 @@ $h4 = $base-font-size * 1.25
 $h5 = $base-font-size * 1.125
 $h6 = $base-font-size
 
-// ::selection
-//   background: $black
-//   color: $accent
-
 h1, h2, h3, h4, h5, h6
   font-weight: 400
   margin-bottom: 1rem
-
 
 h1, .h1 { font-size: $h1; line-height: 1.2 }
 h2, .h2 { font-size: $h2; line-height: 1.3 }
@@ -30,45 +22,6 @@ h3, .h3 { font-size: $h3; line-height: 1.4 }
 h4, .h4 { font-size: $h4; line-height: 1.5 }
 h5, .h5 { font-size: $h5 }
 h6, .h6 { font-size: $h6 }
-
-body
-  font-size: $base-font-size
-  background-color: $white
-  color: $black
-  font-family: $base-font
-  line-height: $base-line-height
-
-a,
-.link
-  color: $accent
-  text-decoration: none
-  transition: color 200ms
-  cursor: pointer
-
-
-a:hover
-  color: $accent
-
-h1 a, .h1 a,
-h2 a, .h2 a,
-h3 a, .h3 a
-  color: inherit
-  text-decoration: underline
-
-p
-  margin-top: 0
-  margin-bottom: 1rem
-
-//====================================================
-//  Lists
-//====================================================
-
-li ul, li ol { margin: 0 1rem }
-ul { list-style-type: disc }
-ol { list-style-type: decimal }
-ol ol { list-style: lower-alpha }
-ol ol ol { list-style: lower-roman }
-ol ol ol ol { list-style: lower-alpha }
 
 hr
   border: 0;
@@ -78,13 +31,20 @@ hr
 //  Text Length & Alignment
 //====================================================
 
-.optimal-length    { max-width: 70ch }
-.text-align-center { text-align: center }
-.text-align-left   { text-align: left }
-.text-align-right  { text-align: right }
 .text-center { text-align: center }
 .text-left   { text-align: left }
 .text-right  { text-align: right }
+
+.tc { text-align: center }
+.tl { text-align: left }
+.tr { text-align: right }
+
+.len { max-width: 70ch }
+.cut {
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+}
 
 //====================================================
 //  Styles & Transforms
@@ -104,16 +64,6 @@ hr
 .bold    { font-weight: 700 }
 
 //====================================================
-//  Styles & Transforms
-//====================================================
-
-+large()
-  .two-columns   { column-count: 2; }
-  .three-columns { column-count: 3; }
-  .four-columns  { column-count: 4; }
-  .five-columns  { column-count: 5; }
-
-//====================================================
 //  Line-Height
 //====================================================
 
@@ -126,6 +76,9 @@ hr
 .lh7 { line-height:  1.7 }
 .lh8 { line-height:  1.8 }
 .lh9 { line-height:  1.9 }
+
+.lh-2 { line-height:  2 }
+.lh-3 { line-height:  3 }
 
 //====================================================
 //  Font Sizing
