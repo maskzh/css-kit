@@ -1,0 +1,143 @@
+//====================================================
+//  Typography
+//====================================================
+
+@font-face { font-family: 'Office Code Pro'; src: url('../fonts/OfficeCodePro-Regular.woff') }
+$base-font = "Helvetica Neue",Helvetica,"Microsoft Yahei",Arial,Verdana,"Hiragino Sans GB",STHeiti,sans-serif
+$mono-font = 'Office Code Pro', Monaco, Consolas, monospace
+$base-font-size = 1rem
+$base-line-height = 1.5
+
+$h1 = $base-font-size * 2.25
+$h2 = $base-font-size * 1.75
+$h3 = $base-font-size * 1.5
+$h4 = $base-font-size * 1.25
+$h5 = $base-font-size * 1.125
+$h6 = $base-font-size
+
+// ::selection
+//   background: $black
+//   color: $accent
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+  margin-bottom: 1rem
+
+
+h1, .h1 { font-size: $h1; line-height: 1.2 }
+h2, .h2 { font-size: $h2; line-height: 1.3 }
+h3, .h3 { font-size: $h3; line-height: 1.4 }
+h4, .h4 { font-size: $h4; line-height: 1.5 }
+h5, .h5 { font-size: $h5 }
+h6, .h6 { font-size: $h6 }
+
+body
+  font-size: $base-font-size
+  background-color: $white
+  color: $black
+  font-family: $base-font
+  line-height: $base-line-height
+
+a,
+.link
+  color: $accent
+  text-decoration: none
+  transition: color 200ms
+  cursor: pointer
+
+
+a:hover
+  color: $accent
+
+h1 a, .h1 a,
+h2 a, .h2 a,
+h3 a, .h3 a
+  color: inherit
+  text-decoration: underline
+
+p
+  margin-top: 0
+  margin-bottom: 1rem
+
+//====================================================
+//  Lists
+//====================================================
+
+li ul, li ol { margin: 0 1rem }
+ul { list-style-type: disc }
+ol { list-style-type: decimal }
+ol ol { list-style: lower-alpha }
+ol ol ol { list-style: lower-roman }
+ol ol ol ol { list-style: lower-alpha }
+
+hr
+  border: 0;
+  border-bottom: 1px solid fade-out($trueblack, 0.9)
+
+//====================================================
+//  Text Length & Alignment
+//====================================================
+
+.optimal-length    { max-width: 70ch }
+.text-align-center { text-align: center }
+.text-align-left   { text-align: left }
+.text-align-right  { text-align: right }
+.text-center { text-align: center }
+.text-left   { text-align: left }
+.text-right  { text-align: right }
+
+//====================================================
+//  Styles & Transforms
+//====================================================
+
+.uppercase        { text-transform: uppercase }
+.lowercase        { text-transform: lowercase }
+.capitalize       { text-transform: capitalize }
+.italic           { font-style: italic }
+.tracked          { letter-spacing: 4px }
+.underline        { text-decoration: underline }
+.no-underline     { text-decoration: none }
+.list-style-none  { list-style-type: none }
+
+.thin    { font-weight: 200 }
+.regular { font-weight: 400 }
+.bold    { font-weight: 700 }
+
+//====================================================
+//  Styles & Transforms
+//====================================================
+
++large()
+  .two-columns   { column-count: 2; }
+  .three-columns { column-count: 3; }
+  .four-columns  { column-count: 4; }
+  .five-columns  { column-count: 5; }
+
+//====================================================
+//  Line-Height
+//====================================================
+
+.lh1 { line-height:  1 }
+.lh2 { line-height:  1.2 }
+.lh3 { line-height:  1.3 }
+.lh4 { line-height:  1.4 }
+.lh5 { line-height:  1.5 }
+.lh6 { line-height:  1.6 }
+.lh7 { line-height:  1.7 }
+.lh8 { line-height:  1.8 }
+.lh9 { line-height:  1.9 }
+
+//====================================================
+//  Font Sizing
+//====================================================
+
+.fs-base     { font-size: $base-font-size }
+.fs-medium   { font-size: medium }
+.fs-xx-small { font-size: xx-small }
+.fs-x-small  { font-size: x-small }
+.fs-small    { font-size: small }
+.fs-large    { font-size: large }
+.fs-x-large  { font-size: x-large }
+.fs-xx-large { font-size: xx-large }
+.fs-smaller  { font-size: smaller }
+.fs-larger   { font-size: larger }

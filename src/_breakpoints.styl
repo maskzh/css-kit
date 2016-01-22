@@ -1,0 +1,17 @@
+$small-break = 480px
+$medium-break = 800px
+
+small()
+  @media screen and (max-width: $small-break) {
+    {block}
+  }
+
+medium()
+  @media screen and (max-width: $medium-break) {
+    {block}
+  }
+
+large()
+  @media screen and (min-width: $small-break) {
+    {block}
+  }
