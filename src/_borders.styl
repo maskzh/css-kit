@@ -3,7 +3,7 @@
 //====================================================
 
 $border-style = solid
-$border-color = rgba(0,0,0,0.1)
+$border-color = #D9D9D9
 $border-radius = 3px
 
 $border-1 = 1px
@@ -38,6 +38,58 @@ $border-3 = 3px
 .bl1 { border-left: $border-1 $border-style $border-color }
 .bl2 { border-left: $border-2 $border-style $border-color }
 .bl3 { border-left: $border-3 $border-style $border-color }
+
+//====================================================
+//  Hair Borders
+//====================================================
+
+.ht
+  content: " "
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 1px
+  border-top: 1px $border-style $border-color
+  color: $border-color
+  transform-origin: 0 0
+  transform: scaleY(0.5)
+
+.hr
+  content: " "
+  position: absolute
+  right: 0
+  top: 0
+  width: 1px
+  height: 100%
+  border-right: 1px $border-style $border-color
+  color: $border-color
+  transform-origin: 100% 0
+  transform: scaleX(0.5)
+
+.hb
+  content: " "
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+  height: 1px
+  border-top: 1px $border-style $border-color
+  color: $border-color
+  transform-origin: 0 0
+  transform: scaleY(0.5)
+
+.hl
+  content: " "
+  position: absolute
+  left: 0
+  top: 0
+  width: 1px
+  height: 100%
+  border-right: 1px $border-style $border-color
+  color: $border-color
+  transform-origin: 100% 0
+  transform: scaleX(0.5)
 
 //====================================================
 //  Border Radius
