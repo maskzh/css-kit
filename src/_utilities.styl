@@ -4,6 +4,7 @@
 
 .hidden       { display: none }
 .hide         { display: none }
+.none         { display: none }
 
 .block        { display: block }
 .inline       { display: inline }
@@ -12,28 +13,21 @@
 .flex         { display: flex }
 .inline-flex  { display: inline-flex }
 
+.db  { display: block }
+.dib { display: inline-block }
+.di  { display: inline }
+
+//====================================================
+//  overflow & Scrolling
+//====================================================
+
 .overflow-hidden { overflow: hidden }
 .overflow-scroll { overflow: scroll }
 .overflow-auto   { overflow: auto }
 
-// 自定义短类名
-.d-b  { display: block }
-.d-ib { display: inline-block }
-.d-i  { display: inline }
-
-.of-h { overflow: hidden }
-.of-a { overflow: auto }
-
-//====================================================
-//  Text wrap
-//====================================================
-
-.pre       { white-space: pre }
-.nowrap    { white-space: nowrap }
-
-//====================================================
-//  Scrolling
-//====================================================
+.ofh { overflow: hidden }
+.ofs { overflow: scroll }
+.ofa { overflow: auto }
 
 .scroll-x {
   overflow-x: scroll
@@ -45,12 +39,19 @@
   overflow-y: scroll
 }
 
-// 隐藏滚动条
+// hide scrollbar
 .no-scrollbar::-webkit-scrollbar {
   width: 0px
   height: 0px
   background: transparent
 }
+
+//====================================================
+//  Text wrap
+//====================================================
+
+.pre       { white-space: pre }
+.nowrap    { white-space: nowrap }
 
 //====================================================
 //  Textareas
@@ -64,16 +65,9 @@
 //  Misc.
 //====================================================
 
-.cursor-pointer {
-  cursor: pointer
-}
+.pointer { cursor: pointer }
+.not-allowed { cursor: not-allowed }
 
-.no-pointer-events {
-  pointer-events: none
-}
+.prevent { pointer-events: none }
 
-.disabled {
-  opacity: 0.5
-  cursor: not-allowed
-  pointer-events: none
-}
+.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none }

@@ -15,16 +15,6 @@
 .bottom { bottom: 0 }
 .left   { left: 0 }
 
-// 绝对定位中心
-.absolute-center {
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  margin: auto
-}
-
 // ====================================================
 //   Floats
 // ====================================================
@@ -38,9 +28,9 @@
 .fl { float: left }
 .fr { float: right }
 
-// 清除浮动
+// clearfix
 .clearfix:before, .clearfix:after
-  display table
-  content ''
+  display: table
+  content: ' '
 .clearfix:after
-  clear both
+  clear: both

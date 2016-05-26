@@ -1,5 +1,8 @@
+$padding = 1rem
+$margin =  1rem
+
 //====================================================
-//  Grid Componets
+//  Flex Componets
 //====================================================
 
 .column
@@ -15,6 +18,65 @@
   height: auto
   flex-direction: row
   flex-wrap: wrap
+
+// ====================================================
+//   Positioning for Flex Items
+// ====================================================
+
+// Columns & Rows need reversed styles to create the same effect
+.center               { align-items: center; justify-content: center }
+.top-left             { align-items: flex-start; justify-content: flex-start }
+.bottom-right         { align-items: flex-end; justify-content: flex-end }
+
+.column.top-center    { align-items: center; justify-content: flex-start }
+.column.top-right     { align-items: flex-end; justify-content: flex-start }
+.column.center-left   { align-items: flex-start; justify-content: center }
+.column.center-right  { align-items: flex-end; justify-content: center }
+.column.bottom-left   { align-items: flex-start; justify-content: flex-end }
+.column.bottom-center { align-items: center; justify-content: flex-end }
+
+.row.top-center       { align-items: flex-start; justify-content: center }
+.row.top-right        { align-items: flex-start; justify-content: flex-end }
+.row.center-left      { align-items: center; justify-content: flex-start }
+.row.center-right     { align-items: center; justify-content: flex-end }
+.row.bottom-left      { align-items: flex-end; justify-content: flex-start }
+.row.bottom-center    { align-items: flex-end; justify-content: center }
+
+// ====================================================
+//   Flex Item Alignment
+// ====================================================
+
+.space-around   { justify-content: space-around }
+.space-between  { justify-content: space-between }
+
+.align-top      { align-items: flex-start }
+.align-middle   { align-items: middle }
+.align-baseline { align-items: baseline }
+.align-stretch  { align-items: stretch }
+
+//====================================================
+//  Flex Order
+//====================================================
+.order1  { order: 1 }
+.order2  { order: 2 }
+.order3  { order: 3 }
+.order4  { order: 4 }
+.order5  { order: 5 }
+.order6  { order: 6 }
+.order7  { order: 7 }
+.order8  { order: 8 }
+.order9  { order: 9 }
+.order10 { order: 10 }
+
+//====================================================
+//  Flex Sizing
+//====================================================
+
+.flex1 { flex: 1 }
+.flex2 { flex: 2 }
+.flex3 { flex: 3 }
+.flex4 { flex: 4 }
+.flex5 { flex: 5 }
 
 //====================================================
 //  Gutters
@@ -50,64 +112,3 @@
   .w90   { width:  calc(90%  -  ($padding + $margin)) }
   .w95   { width:  calc(95%  -  ($padding + $margin)) }
   .w100  { width:  calc(100% -  ($padding + $margin)) }
-
-// ====================================================
-//   Positioning for Flex Items
-// ====================================================
-
-// Columns & Rows need reversed styles to create the same effect
-
-.center               { align-items: center; justify-content: center }
-.top-left             { align-items: flex-start; justify-content: flex-start }
-.bottom-right         { align-items: flex-end; justify-content: flex-end }
-
-.column.top-center    { align-items: center; justify-content: flex-start }
-.column.top-right     { align-items: flex-end; justify-content: flex-start }
-.column.center-left   { align-items: flex-start; justify-content: center }
-.column.center-right  { align-items: flex-end; justify-content: center }
-.column.bottom-left   { align-items: flex-start; justify-content: flex-end }
-.column.bottom-center { align-items: center; justify-content: flex-end }
-
-.row.top-center       { align-items: flex-start; justify-content: center }
-.row.top-right        { align-items: flex-start; justify-content: flex-end }
-.row.center-left      { align-items: center; justify-content: flex-start }
-.row.center-right     { align-items: center; justify-content: flex-end }
-.row.bottom-left      { align-items: flex-end; justify-content: flex-start }
-.row.bottom-center    { align-items: flex-end; justify-content: center }
-
-// ====================================================
-//   Flex Item Alignment
-// ====================================================
-
-.space-around   { justify-content: space-around }
-.space-between  { justify-content: space-between }
-
-.align-top      { align-items: flex-start }
-.align-middle   { align-items: middle }
-.align-baseline { align-items: baseline }
-.align-stretch  { align-items: stretch }
-
-//====================================================
-//  Flex Order
-//====================================================
-
-.order-1  { order: 1 }
-.order-2  { order: 2 }
-.order-3  { order: 3 }
-.order-4  { order: 4 }
-.order-5  { order: 5 }
-.order-6  { order: 6 }
-.order-7  { order: 7 }
-.order-8  { order: 8 }
-.order-9  { order: 9 }
-.order-10 { order: 10 }
-
-//====================================================
-//  Flex Sizing
-//====================================================
-
-.flex1 { flex: 1 }
-.flex2 { flex: 2 }
-.flex3 { flex: 3 }
-.flex4 { flex: 4 }
-.flex5 { flex: 5 }
