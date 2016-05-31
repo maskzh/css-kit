@@ -1,8 +1,16 @@
 {
   "name": "toolkit",
   "version": "1.0.0",
-  "description": "css toolkit",
-  "main": "gulpfile.babel.js",
+  "description": "Css Toolkit",
+  "main": "dist/toolkit.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maskzh/toolkit.git"
+  },
+  "keywords": [
+    "css",
+    "toolkit"
+  ],
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "cssnano": "^3.4.0",
@@ -16,5 +24,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elliott",
-  "license": "ISC"
+  "license": "MIT"
 }
