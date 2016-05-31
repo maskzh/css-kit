@@ -16,6 +16,11 @@
   - [utilities 显示隐藏滚动等工具类](#utilities-显示隐藏滚动等工具类)
   - [whitespace 内补外补](#whitespace-内补外补)
 
+## 如何使用
+```shell
+npm i css-kit --save
+```
+
 
 ## animation 基础动画
 支持的动画如下
