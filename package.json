@@ -1,7 +1,7 @@
 {
-  "name": "toolkit",
+  "name": "css-kit",
   "version": "1.0.0",
-  "description": "Css Toolkit",
+  "description": "CSS Toolkit",
   "main": "dist/toolkit.css",
   "repository": {
     "type": "git",
