@@ -59,10 +59,10 @@ npm i css-kit --save
 
 ### hair border 头发丝边框
 0.5px 的边框，通过 :before，:after 以及 transform: scale 缩放来实现
-- .ht 上边框
-- .hr 右边框
-- .hb 下边框
-- .hl 左边框
+- .bht 上边框
+- .bhr 右边框
+- .bhb 下边框
+- .bhl 左边框
 
 ### 边框工具类
 - .rounded     { border-radius: $border-radius }
@@ -319,11 +319,11 @@ html { font-size: 10px }
 ```
 并额外提供几个最小高度的类名
 ```css
-.mh100   { height: 100px }
-.mh200   { height: 200px }
-.mh300   { height: 300px }
-.mh400   { height: 400px }
-.mh500   { height: 500px }
+.mh100   { min-height: 100px }
+.mh200   { min-height: 200px }
+.mh300   { min-height: 300px }
+.mh400   { min-height: 400px }
+.mh500   { min-height: 500px }
 ```
 
 ## typography 排版相关
@@ -537,19 +537,19 @@ plr => padding-right & padding-left
 
 #### 额外提供 `5px` 和 `15px`
 ```css
-.p-5 { padding: 5px }
+.ph { padding: 5px }
 .p15 { padding: 15px }
-.pt-5 { padding-top: 5px }
+.pth { padding-top: 5px }
 .pt15 { padding-top: 15px }
-.pr-5 { padding-right: 5px }
+.prh { padding-right: 5px }
 .pr15 { padding-right: 15px }
-.pb-5 { padding-bottom: 5px }
+.pbh { padding-bottom: 5px }
 .pb15 { padding-bottom: 15px }
-.pl-5 { padding-left: 5px }
+.plh { padding-left: 5px }
 .pl15 { padding-left: 15px }
-.ptb-5 { padding-top: 5px; padding-bottom: 5px }
+.ptbh { padding-top: 5px; padding-bottom: 5px }
 .ptb15 { padding-top: 15px; padding-bottom: 15px }
-.pl-5 { padding-left: 5px; padding-right: 5px }
+.plh { padding-left: 5px; padding-right: 5px }
 .pl15 { padding-left: 15px; padding-right: 15px }
 ```
 
