@@ -39,6 +39,6 @@ gulp.task('default', function(){
   gulp.src('src/toolkit.styl')
     .pipe(stylus())
     .pipe(postcss(processors))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('lib'))
   console.log('[stylus building]')
 })

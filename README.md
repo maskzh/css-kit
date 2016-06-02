@@ -1,78 +1,77 @@
 # css 工具箱
+一个用于快速构建 Web 界面的 CSS 工具库
 - 无 reset 样式
 - 无基础（h1-6、table 等）样式
-- 仅包含工具类如下
-  - [animation 基础动画](#animation-基础动画)
-  - [borders 边框相关](#borders-边框相关)
-  - [colors 颜色，背景色，边框色](#colors-文字色背景色边框色)
-  - [depth zIndex 层级](#depth-zindex-层级)
-  - [flex 栅格布局，基于 flex](#flex-栅格布局基于-flex)
-  - [grid 栅格布局，基于 float](#grid-栅格布局基于-float)
-  - [images 图片，背景图相关](#images-图片背景图相关)
-  - [positioning 定位，浮动](#positioning-定位浮动)
-  - [responsive 响应式相关](#responsive-响应式相关)
-  - [sizing 宽高](#sizing-宽高)
-  - [typography 排版相关](#typography-排版相关)
-  - [utilities 显示隐藏滚动等工具类](#utilities-显示隐藏滚动等工具类)
-  - [whitespace 内补外补](#whitespace-内补外补)
+- 仅包含工具类
 
-## 如何使用
+## 安装
 ```shell
 npm i css-kit --save
 ```
 
+## 使用
+```js
+import 'css-kit'
+```
+or 使用 `dist` 下的目录下 toolkit.css 文件
 
-## animation 基础动画
+## 文档
+- [animation 基础动画](#animation-基础动画)
+- [borders 边框相关](#borders-边框相关)
+- [colors 颜色，背景色，边框色](#colors-文字色背景色边框色)
+- [depth zIndex 层级](#depth-zindex-层级)
+- [flex 栅格布局，基于 flex](#flex-栅格布局基于-flex)
+- [grid 栅格布局，基于 float](#grid-栅格布局基于-float)
+- [images 图片，背景图相关](#images-图片背景图相关)
+- [positioning 定位，浮动](#positioning-定位浮动)
+- [responsive 响应式相关](#responsive-响应式相关)
+- [sizing 宽高](#sizing-宽高)
+- [typography 排版相关](#typography-排版相关)
+- [utilities 显示隐藏滚动等工具类](#utilities-显示隐藏滚动等工具类)
+- [whitespace 内补外补](#whitespace-内补外补)
+
+### animation 基础动画
 支持的动画如下
-### fade
-  - .fadeIn
-  - .fadeOut
-  - .fadeInUp
-  - .fadeInDown
-### slide
-  - .slideUp
-  - .slideDown
-  - .slideRight
-  - .slideLeft
-### scale
-  - .scaleUp
-  - .scaleDown
-### flip
-  - .flipIn
-  - .flipOut
-### rotate
-  - .rotateRight
-  - .rotateLeft
-### other
-  - .flash
-  - .shake
+#### fade
+  - `.fadeIn`, `.fadeOut` `.fadeInUp`, `.fadeInDown`
+#### slide
+  - `.slideUp`, `.slideDown`, `.slideRight`, `.slideLeft`
+#### scale
+  - `.scaleUp`, `.scaleDown`
+#### flip
+  - `.flipIn`, `.flipOut`
+#### rotate
+  - `.rotateRight`, `.rotateLeft`
+#### other
+  - `.flash`, `.shake`
 
-## borders 边框相关
+### borders 边框相关
+#### 边框类型
 默认的 border-style 为 `solid`，默认的 border-color 为 `#D9D9D9`，默认的 border-radius 为 `3px`
 
 下面的类名默认都有 `border-style` 和 `border-color` 的样式
-- .b0、.b1、.b2、.b3 border-width 分别为 0, 1px, 2px, 3px，
-- .bt0、.bt1、.bt2、.bt3 上边框 border-width 分别为 0, 1px, 2px, 3px
-- .br0、.br1、.br2、.br3 右边框 border-width 分别为 0, 1px, 2px, 3px
-- .bb0、.bb1、.bb2、.bb3 下边框 border-width 分别为 0, 1px, 2px, 3px
-- .bl0、.bl1、.bl2、.bl3 左边框 border-width 分别为 0, 1px, 2px, 3px
+- `.b0`、`.b1`、`.b2`、`.b3` border-width 分别为 0, 1px, 2px, 3px，
+- `.bt0`、`.bt1`、`.bt2`、`.bt3` 上边框 border-width 分别为 0, 1px, 2px, 3px
+- `.br0`、`.br1`、`.br2`、`.br3` 右边框 border-width 分别为 0, 1px, 2px, 3px
+- `.bb0`、`.bb1`、`.bb2`、`.bb3` 下边框 border-width 分别为 0, 1px, 2px, 3px
+- `.bl0`、`.bl1`、`.bl2`、`.bl3` 左边框 border-width 分别为 0, 1px, 2px, 3px
 
-### hair border 头发丝边框
+#### hair border
 0.5px 的边框，通过 :before，:after 以及 transform: scale 缩放来实现
 - .bht 上边框
 - .bhr 右边框
 - .bhb 下边框
 - .bhl 左边框
 
-### 边框工具类
+#### 边框其他样式
 - .rounded     { border-radius: $border-radius }
 - .not-rounded { border-radius: 0 }
 - .circle      { border-radius: 50% }
 
 
-## colors 文字色，背景色，边框色
+### colors 文字色，背景色，边框色
 提供文字颜色、背景颜色、边框颜色支持的颜色
-```stylus
+```
 primary =    #337ab7
 success =    #5cb85c
 info    =    #5bc0de
@@ -89,7 +88,7 @@ black     =  #222
 trueblack =  #000
 ```
 
-文字颜色、背景颜色、边框颜色，分别使用 `color-xxx`、`bg-xxx`、`border-xxx`（eg. color-success、bg-white、border-black）
+**文字颜色、背景颜色、边框颜色，分别使用 `color-xxx`、`bg-xxx`、`border-xxx`（eg. color-success、bg-white、border-black）**
 
 > 提供 `text-xxx` 作为 `color-xxx` 的别名
 
@@ -114,7 +113,7 @@ trueblack =  #000
 ```
 
 
-## depth zIndex 层级
+### depth zIndex 层级
 ```css
 .depth0  { z-index:    -1 }
 .depth1  { z-index:  1000 }
@@ -129,8 +128,8 @@ trueblack =  #000
 .depth10 { z-index: 10000 }
 ```
 
-## flex 栅格布局，基于 flex
-### Flex 容器
+### flex 栅格布局，基于 flex
+#### Flex 容器
 ```css
 .column {
   display: flex;
@@ -149,7 +148,7 @@ trueblack =  #000
 }
 ```
 
-### Flex Items 定位
+#### Flex Items 定位
 ```css
 .center               { align-items: center; justify-content: center }
 .top-left             { align-items: flex-start; justify-content: flex-start }
@@ -170,7 +169,7 @@ trueblack =  #000
 .row.bottom-center    { align-items: flex-end; justify-content: center }
 ```
 
-### Flex Items 对齐
+#### Flex Items 对齐
 ```css
 .space-around   { justify-content: space-around }
 .space-between  { justify-content: space-between }
@@ -181,7 +180,7 @@ trueblack =  #000
 .align-stretch  { align-items: stretch }
 ```
 
-### Flex Order
+#### Flex Order
 ```css
 .order1  { order: 1 }
 .order2  { order: 2 }
@@ -195,7 +194,7 @@ trueblack =  #000
 .order10 { order: 10 }
 ```
 
-### Flex Size
+#### Flex Size
 ```css
 .flex1 { flex: 1 }
 .flex2 { flex: 2 }
@@ -205,12 +204,12 @@ trueblack =  #000
 ```
 
 
-## grid 栅格布局，基于 float
+### grid 栅格布局，基于 float
 同 bootstrap 分为 12 栅格，从 `.col-1` 到 `.col-12`。
 也同时提供 `.col-pull-x`、`.col-push-x`、`.col-offset-x` 系列类名
 
-## images 图片，背景图相关
-### 背景图
+### images 图片，背景图相关
+#### 背景图
 ```css
 .bg-no-repeat { background-repeat: no-repeat }
 .bg-cover     { background-size: cover }
@@ -233,29 +232,22 @@ trueblack =  #000
 ```
 
 
-## positioning 定位，浮动
-### 定位
+### positioning 定位，浮动
+#### 定位
 ```css
 .relative { position: relative }
 .absolute { position: absolute }
 .fixed    { position: fixed }
-```
-```css
+
 .top    { top: 0 }
 .right  { right: 0 }
 .bottom { bottom: 0 }
 .left   { left: 0 }
 ```
-### 浮动
+#### 浮动
 ```css
 .float-left  { float: left }
 .float-right { float: right }
-
-.pull-left  { float: left }
-.pull-right { float: right }
-
-.fl { float: left }
-.fr { float: right }
 
 /*清楚浮动*/
 .clearfix:before, .clearfix:after {
@@ -264,7 +256,9 @@ trueblack =  #000
 }
 .clearfix:after { clear: both }
 ```
-## responsive 响应式相关
+> 提供 `.pull-left`，`.pull-right` 以及 `.fl`，`.fr` 作为 `.float-left`，`.float-right` 的别名
+
+### responsive 响应式相关
 ```css
 html { font-size: 10px }
 
@@ -280,8 +274,8 @@ html { font-size: 10px }
 ```
 
 
-## sizing 宽高
-### 宽
+### sizing 宽高
+#### 宽
 ```css
 .w-auto    { width: auto    !important }
 .w-inherit { width: inherit !important }
@@ -299,7 +293,7 @@ html { font-size: 10px }
 ...
 .w100 { width: 100% }
 ```
-### 高
+#### 高
 ```css
 .h-auto    { height: auto !important }
 .h-inherit { height: inherit !important }
@@ -326,8 +320,8 @@ html { font-size: 10px }
 .mh500   { min-height: 500px }
 ```
 
-## typography 排版相关
-### 文本对齐
+### typography 排版相关
+#### 文本对齐
 ```css
 .text-center { text-align: center }
 .text-left   { text-align: left }
@@ -335,7 +329,7 @@ html { font-size: 10px }
 ```
 `.tc`、`.tl`、`.tr` 分别作为 `.text-center`、`.text-left`、`.text-right` 的别名
 
-### 行高
+#### 行高
 ```css
 .lh1 { line-height:  1 }
 .lh2 { line-height:  1.2 }
@@ -351,7 +345,7 @@ html { font-size: 10px }
 .lh-3 { line-height:  3 }
 ```
 
-### 字体大小
+#### 字体大小
 ```css
 .fs-xx-small { font-size: xx-small }
 .fs-x-small  { font-size: x-small }
@@ -369,29 +363,12 @@ html { font-size: 10px }
 .fs14       { font-size: 14px }
 .fs15       { font-size: 15px }
 .fs16       { font-size: 16px }
-.fs17       { font-size: 17px }
-.fs18       { font-size: 18px }
-.fs19       { font-size: 19px }
-.fs20       { font-size: 20px }
-.fs21       { font-size: 21px }
-.fs22       { font-size: 22px }
-.fs23       { font-size: 23px }
-.fs24       { font-size: 24px }
-.fs25       { font-size: 25px }
-.fs26       { font-size: 26px }
-.fs27       { font-size: 27px }
-.fs28       { font-size: 28px }
-.fs29       { font-size: 29px }
-.fs30       { font-size: 30px }
-.fs31       { font-size: 31px }
-.fs32       { font-size: 32px }
-.fs33       { font-size: 33px }
-.fs34       { font-size: 34px }
+...
 .fs35       { font-size: 35px }
 .fs36       { font-size: 36px }
 ```
 
-### 其他工具类
+#### 其他字体样式
 ```css
 /*文字溢出隐藏*/
 .cut {
@@ -415,8 +392,8 @@ html { font-size: 10px }
 .bold    { font-weight: 700 }
 ```
 
-## utilities 显示隐藏滚动等工具类
-### display
+### utilities 显示隐藏滚动等工具类
+#### display
 ```css
 .hidden       { display: none }
 .hide         { display: none }
@@ -429,9 +406,9 @@ html { font-size: 10px }
 .flex         { display: flex }
 .inline-flex  { display: inline-flex }
 ```
-同时 `.db`、`.dib`、`.di` 作为 `.block`、`.inline`、`.inline-block` 的别名
+> 同时 `.db`、`.dib`、`.di` 作为 `.block`、`.inline`、`.inline-block` 的别名
 
-### overflow & Scrolling
+#### overflow & Scrolling
 ```css
 .overflow-hidden { overflow: hidden }
 .overflow-scroll { overflow: scroll }
@@ -452,22 +429,22 @@ html { font-size: 10px }
   background: transparent
 }
 ```
-同时 `.ofh`、`.ofs`、`.ofa` 作为 `.overflow-hidden`、`.overflow-scroll`、`.overflow-auto` 的别名
+> 同时 `.ofh`、`.ofs`、`.ofa` 作为 `.overflow-hidden`、`.overflow-scroll`、`.overflow-auto` 的别名
 
-### Text wrap
+#### Text wrap
 ```css
 .pre       { white-space: pre }
 .nowrap    { white-space: nowrap }
 ```
 
-### Textareas
+#### Textareas
 ```css
 .resize-none       { resize: none }
 .resize-vertical   { resize: vertical }
 .resize-horizontal { resize: horizontal }
 ```
 
-### Misc
+#### Misc
 ```css
 .pointer { cursor: pointer }
 .not-allowed { cursor: not-allowed }
@@ -478,11 +455,11 @@ html { font-size: 10px }
 ```
 
 
-## whitespace 内补外补
+### whitespace 内补外补
 提供内补和外补，粒度为 `1rem` 和 `10px`
 
-### 内补
-#### 以 `1rem` 为粒度
+#### 内补
+##### 以 `1rem` 为粒度
 ```css
 .p0 { padding: 0 }
 .p1 { padding: 1rem }
@@ -510,7 +487,7 @@ plr => padding-right & padding-left
 .ptb5 { padding-top: 5rem; padding-bottom: 5rem }
 ```
 
-#### 以 `10px` 为粒度
+##### 以 `10px` 为粒度
 ```css
 .p10 { padding: 10px }
 ...
@@ -535,7 +512,7 @@ plr => padding-right & padding-left
 .ptb50 { padding-top: 50px; padding-bottom: 50px }
 ```
 
-#### 额外提供 `5px` 和 `15px`
+##### 额外提供 `5px` 和 `15px`
 ```css
 .ph { padding: 5px }
 .p15 { padding: 15px }
@@ -553,4 +530,5 @@ plr => padding-right & padding-left
 .pl15 { padding-left: 15px; padding-right: 15px }
 ```
 
-### 外补同补风格一致，类名前缀为 `m`
+### 外补
+**外补命名同内补风格一致，类名前缀为 `m`**

@@ -1,16 +1,27 @@
 {
   "name": "css-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CSS Toolkit",
-  "main": "dist/toolkit.css",
+  "main": "./lib/toolkit.css",
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "build": "npm run clean & gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maskzh/toolkit.git"
+    "url": "git+https://github.com/maskzh/css-kit.git"
   },
   "keywords": [
     "css",
     "toolkit"
   ],
+  "author": "maskzh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maskzh/css-kit/issues"
+  },
+  "homepage": "https://github.com/maskzh/css-kit#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "cssnano": "^3.4.0",
@@ -18,11 +29,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.2.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Elliott",
-  "license": "MIT"
+    "gulp-stylus": "^2.2.0",
+    "rimraf": "^2.5.2"
+  }
 }
