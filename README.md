@@ -33,17 +33,22 @@ or 使用 `dist` 下的目录下 toolkit.css 文件
 ### animation 基础动画
 支持的动画如下
 #### fade
-  - `.fadeIn`, `.fadeOut` `.fadeInUp`, `.fadeInDown`
+- `.fadeIn`, `.fadeOut` `.fadeInUp`, `.fadeInDown`
+
 #### slide
-  - `.slideUp`, `.slideDown`, `.slideRight`, `.slideLeft`
+- `.slideUp`, `.slideDown`, `.slideRight`, `.slideLeft`
+
 #### scale
-  - `.scaleUp`, `.scaleDown`
+- `.scaleUp`, `.scaleDown`
+
 #### flip
-  - `.flipIn`, `.flipOut`
+- `.flipIn`, `.flipOut`
+
 #### rotate
-  - `.rotateRight`, `.rotateLeft`
+- `.rotateRight`, `.rotateLeft`
+
 #### other
-  - `.flash`, `.shake`
+- `.flash`, `.shake`
 
 ### borders 边框相关
 #### 边框类型
@@ -58,10 +63,10 @@ or 使用 `dist` 下的目录下 toolkit.css 文件
 
 #### hair border
 0.5px 的边框，通过 :before，:after 以及 transform: scale 缩放来实现
-- .bht 上边框
-- .bhr 右边框
-- .bhb 下边框
-- .bhl 左边框
+- `.bht` 上边框
+- `.bhr` 右边框
+- `.bhb` 下边框
+- `.bhl `左边框
 
 #### 边框其他样式
 - .rounded     { border-radius: $border-radius }
@@ -327,7 +332,7 @@ html { font-size: 10px }
 .text-left   { text-align: left }
 .text-right  { text-align: right }
 ```
-`.tc`、`.tl`、`.tr` 分别作为 `.text-center`、`.text-left`、`.text-right` 的别名
+> `.tc`、`.tl`、`.tr` 分别作为 `.text-center`、`.text-left`、`.text-right` 的别名
 
 #### 行高
 ```css
