@@ -16,19 +16,19 @@ import 'css-kit'
 or 使用 `dist` 下的目录下 toolkit.css 文件
 
 ## 文档
-- [animation 基础动画](#animation-基础动画)
-- [borders 边框相关](#borders-边框相关)
-- [colors 颜色，背景色，边框色](#colors-文字色背景色边框色)
-- [depth zIndex 层级](#depth-zindex-层级)
-- [flex 栅格布局，基于 flex](#flex-栅格布局基于-flex)
-- [grid 栅格布局，基于 float](#grid-栅格布局基于-float)
-- [images 图片，背景图相关](#images-图片背景图相关)
-- [positioning 定位，浮动](#positioning-定位浮动)
-- [responsive 响应式相关](#responsive-响应式相关)
-- [sizing 宽高](#sizing-宽高)
-- [typography 排版相关](#typography-排版相关)
-- [utilities 显示隐藏滚动等工具类](#utilities-显示隐藏滚动等工具类)
-- [whitespace 内补外补](#whitespace-内补外补)
+- [animation](#animation-基础动画)
+- [borders](#borders-边框相关)
+- [colors](#colors-文字色背景色边框色)
+- [depth](#depth-zindex-层级)
+- [flex](#flex-栅格布局基于-flex)
+- [grid](#grid-栅格布局基于-float)
+- [images](#images-图片背景图相关)
+- [positioning](#positioning-定位浮动)
+- [responsive](#responsive-响应式相关)
+- [sizing](#sizing-宽高)
+- [typography](#typography-排版相关)
+- [utilities](#utilities-显示隐藏滚动等工具类)
+- [whitespace](#whitespace-内补外补)
 
 ### animation 基础动画
 支持的动画如下
