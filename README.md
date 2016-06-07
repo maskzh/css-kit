@@ -13,7 +13,7 @@ npm i css-kit --save
 ```js
 import 'css-kit'
 ```
-or 使用 `dist` 下的目录下 toolkit.css 文件
+or 使用 `lib` 下的目录下 toolkit.css 文件
 
 ## 文档
 - [animation](#animation-基础动画)
