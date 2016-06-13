@@ -24,7 +24,7 @@ or 使用 `lib` 下的目录下 toolkit.css 文件
 - [grid](#grid-栅格布局基于-float)
 - [images](#images-图片背景图相关)
 - [positioning](#positioning-定位浮动)
-- [responsive](#responsive-响应式相关)
+<!-- - [responsive](#responsive-响应式相关) -->
 - [sizing](#sizing-宽高)
 - [typography](#typography-排版相关)
 - [utilities](#utilities-显示隐藏滚动等工具类)
@@ -263,7 +263,7 @@ trueblack =  #000
 ```
 > 提供 `.pull-left`，`.pull-right` 以及 `.fl`，`.fr` 作为 `.float-left`，`.float-right` 的别名
 
-### responsive 响应式相关
+<!-- ### responsive 响应式相关
 ```css
 html { font-size: 10px }
 
@@ -276,7 +276,7 @@ html { font-size: 10px }
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) {
   html { font-size: 12.9375px }
 }
-```
+``` -->
 
 
 ### sizing 宽高
