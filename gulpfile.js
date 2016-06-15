@@ -1,44 +1,37 @@
 var gulp = require('gulp')
 var notify = require('gulp-notify')
+var rename = require('gulp-rename')
+var header = require('gulp-header')
 var sourcemaps = require('gulp-sourcemaps')
 var stylus = require('gulp-stylus')
-var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer')
-var cssnano = require('cssnano')
+var postcss = require('gulp-postcss')
+var nano = require('gulp-cssnano')
+var pkg = require('./package.json')
 
-var processors = [
-  autoprefixer({
-    browsers: [
-      'last 2 versions'
-    ]
-  }),
-  cssnano({
-    browsers: [
-      'last 2 versions'
-    ]
-  })
-]
-
-gulp.task('watch', function(){
-  gulp.watch('src/*.styl').on('change', function(event){
-    gulp.src('src/toolkit.styl')
-      .pipe(sourcemaps.init())
-      .pipe(stylus())
-      .pipe(postcss(processors))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./'))
-      .pipe(notify({
-        message: "<%= file.relative %>",
-        title: "Stylus Compile"
-      }))
-    console.log('[stylus Compiling]')
-  })
-})
+var banner = [
+  '/*!',
+  ' * CSSKit v<%= pkg.version %> (<%= pkg.homepage %>)',
+  ' * Licensed under the <%= pkg.license %> license',
+  ' */',
+  ''].join('\n')
 
 gulp.task('default', function(){
   gulp.src('src/toolkit.styl')
-    .pipe(stylus())
-    .pipe(postcss(processors))
+    .pipe(sourcemaps.init())
+    .pipe(stylus().on('error', function (e) {
+        console.error(e.message);
+        this.emit('end');
+    }))
+    .pipe(postcss([autoprefixer]))
+    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('lib'))
-  console.log('[stylus building]')
+    .pipe(nano({
+        zindex: false
+    }))
+    .pipe(rename(function (path) {
+        path.basename += '.min';
+    }))
+    .pipe(gulp.dest('lib'))
 })

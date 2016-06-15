@@ -13,7 +13,7 @@ npm i css-kit --save
 ```js
 import 'css-kit'
 ```
-or 使用 `lib` 下的目录下 toolkit.css 文件
+or 使用 `lib` 下的目录下 `toolkit.css` or `toolkit.min.css` 文件
 
 ## 文档
 - [animation](#animation-基础动画)
@@ -24,7 +24,6 @@ or 使用 `lib` 下的目录下 toolkit.css 文件
 - [grid](#grid-栅格布局基于-float)
 - [images](#images-图片背景图相关)
 - [positioning](#positioning-定位浮动)
-<!-- - [responsive](#responsive-响应式相关) -->
 - [sizing](#sizing-宽高)
 - [typography](#typography-排版相关)
 - [utilities](#utilities-显示隐藏滚动等工具类)
