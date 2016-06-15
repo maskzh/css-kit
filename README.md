@@ -1,4 +1,4 @@
-# css 工具箱
+# css 工具箱 [![npm version](https://img.shields.io/npm/v/css-kit.svg)](https://www.npmjs.org/package/css-kit)
 一个用于快速构建 Web 界面的 CSS 工具库
 - 无 reset 样式
 - 无基础（h1-6、table 等）样式
