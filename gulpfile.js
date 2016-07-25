@@ -1,8 +1,12 @@
 var gulp = require('gulp')
+var notify = require('gulp-notify')
 var rename = require('gulp-rename')
 var header = require('gulp-header')
-var uglify = require('gulp-uglify')
 var sourcemaps = require('gulp-sourcemaps')
+var stylus = require('gulp-stylus')
+var autoprefixer = require('autoprefixer')
+var postcss = require('gulp-postcss')
+var nano = require('gulp-cssnano')
 var pkg = require('./package.json')
 
 var banner = [
@@ -13,17 +17,21 @@ var banner = [
   ''].join('\n')
 
 gulp.task('default', function(){
-  gulp.src('src/*.js')
+  gulp.src('src/toolkit.styl')
     .pipe(sourcemaps.init())
-    .pipe(uglify().on('error', function (e) {
+    .pipe(stylus().on('error', function (e) {
         console.error(e.message);
         this.emit('end');
     }))
+    .pipe(postcss([autoprefixer]))
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('lib'))
+    .pipe(nano({
+        zindex: false
+    }))
     .pipe(rename(function (path) {
         path.basename += '.min';
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('lib'))
 })
