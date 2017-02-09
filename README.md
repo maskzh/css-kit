@@ -335,7 +335,7 @@ html { font-size: 10px }
 
 #### 行高
 ```css
-.lh1 { line-height:  1 }
+.lh1 { line-height:  1.1 }
 .lh2 { line-height:  1.2 }
 .lh3 { line-height:  1.3 }
 .lh4 { line-height:  1.4 }
@@ -345,6 +345,7 @@ html { font-size: 10px }
 .lh8 { line-height:  1.8 }
 .lh9 { line-height:  1.9 }
 
+.lh-1 { line-height:  1 }
 .lh-2 { line-height:  2 }
 .lh-3 { line-height:  3 }
 ```
@@ -368,8 +369,8 @@ html { font-size: 10px }
 .fs15       { font-size: 15px }
 .fs16       { font-size: 16px }
 ...
-.fs35       { font-size: 35px }
-.fs36       { font-size: 36px }
+.fs47       { font-size: 47px }
+.fs48       { font-size: 48px }
 ```
 
 #### 其他字体样式
@@ -520,18 +521,25 @@ plr => padding-right & padding-left
 ```css
 .ph { padding: 5px }
 .p15 { padding: 15px }
+.p25 { padding: 25px }
 .pth { padding-top: 5px }
 .pt15 { padding-top: 15px }
+.pt25 { padding-top: 25px }
 .prh { padding-right: 5px }
 .pr15 { padding-right: 15px }
+.pr25 { padding-right: 25px }
 .pbh { padding-bottom: 5px }
 .pb15 { padding-bottom: 15px }
+.pb25 { padding-bottom: 25px }
 .plh { padding-left: 5px }
 .pl15 { padding-left: 15px }
+.pl25 { padding-left: 25px }
 .ptbh { padding-top: 5px; padding-bottom: 5px }
 .ptb15 { padding-top: 15px; padding-bottom: 15px }
+.ptb25 { padding-top: 25px; padding-bottom: 25px }
 .plh { padding-left: 5px; padding-right: 5px }
 .pl15 { padding-left: 15px; padding-right: 15px }
+.pl25 { padding-left: 25px; padding-right: 25px }
 ```
 
 ### 外补
