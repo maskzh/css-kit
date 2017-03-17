@@ -17,7 +17,7 @@ var banner = [
   ''].join('\n')
 
 gulp.task('default', function(){
-  gulp.src('src/toolkit.styl')
+  gulp.src('src/csskit.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus().on('error', function (e) {
         console.error(e.message);
@@ -26,12 +26,12 @@ gulp.task('default', function(){
     .pipe(postcss([autoprefixer]))
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('dist'))
     .pipe(nano({
         zindex: false
     }))
     .pipe(rename(function (path) {
         path.basename += '.min';
     }))
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('dist'))
 })
