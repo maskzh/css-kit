@@ -1,6 +1,6 @@
 {
   "name": "css-kit",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "CSS Toolkit",
   "main": "./dist/csskit.css",
   "scripts": {
