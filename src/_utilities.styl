@@ -2,49 +2,36 @@
 //  Display
 //====================================================
 
-.hidden       { display: none }
-.hide         { display: none }
-.none         { display: none }
+.hidden, .hide, .none { display: none }
 
-.block        { display: block }
-.inline       { display: inline }
-.inline-block { display: inline-block }
+.block, .db         { display: block }
+.inline, .di        { display: inline }
+.inline-block, .dib { display: inline-block }
 
 .flex         { display: flex }
 .inline-flex  { display: inline-flex }
-
-.db  { display: block }
-.dib { display: inline-block }
-.di  { display: inline }
 
 //====================================================
 //  overflow & Scrolling
 //====================================================
 
-.overflow-hidden { overflow: hidden }
-.overflow-scroll { overflow: scroll }
-.overflow-auto   { overflow: auto }
+.overflow-hidden, .ofh { overflow: hidden }
+.overflow-scroll, .ofs { overflow: scroll }
+.overflow-auto, .ofa   { overflow: auto }
 
-.ofh { overflow: hidden }
-.ofs { overflow: scroll }
-.ofa { overflow: auto }
-
-.scroll-x {
+.scroll-x
   overflow-x: scroll
   overflow-y: hidden
-}
 
-.scroll-y {
+.scroll-y
   overflow-x: hidden
   overflow-y: scroll
-}
 
 // hide scrollbar
-.no-scrollbar::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar
   width: 0px
   height: 0px
   background: transparent
-}
 
 //====================================================
 //  Text wrap

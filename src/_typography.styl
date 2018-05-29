@@ -16,19 +16,30 @@
 //  Text Length & Alignment
 //====================================================
 
-.text-center { text-align: center }
-.text-left   { text-align: left }
-.text-right  { text-align: right }
-
-.tc { text-align: center }
-.tl { text-align: left }
-.tr { text-align: right }
+.text-center, .tc  { text-align: center }
+.text-left, .tl    { text-align: left }
+.text-right, .tr    { text-align: right }
+.text-justify, .tj
+  text-align: justify
+  text-justify: distribute-all-lines
+  text-align-last: justify
+  -webkit-text-align-last: justify
 
 .cut {
   text-overflow: ellipsis
   overflow: hidden
   white-space: nowrap
   max-width: 70ch
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .text-justify:after, .tj:after{
+    content: ".";
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+  }
 }
 
 //====================================================
@@ -102,6 +113,14 @@
 .fs46       { font-size: 46px }
 .fs47       { font-size: 47px }
 .fs48       { font-size: 48px }
+.fs49       { font-size: 49px }
+.fs50       { font-size: 50px }
+.fs51       { font-size: 51px }
+.fs52       { font-size: 52px }
+.fs53       { font-size: 53px }
+.fs54       { font-size: 54px }
+.fs55       { font-size: 55px }
+.fs56       { font-size: 56px }
 
 //====================================================
 //  Styles & Transforms
